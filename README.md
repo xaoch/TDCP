@@ -22,62 +22,13 @@ sbatch extractAudio.s /scratch/xao1/TDCP/smaller.mp4
 
 ## Normalize Audio
 
-sbatch normalizeAudio.s BiochemS1/Session_1_0930_Sensor_3/Three.wav BiochemS1/Session_1_0930_Sensor_3/ThreeNormalized.wav
-sbatch normalizeAudio.s BiochemS1/Session_1_0930_Sensor_4/Four.wav BiochemS1/Session_1_0930_Sensor_4/FourNormalized.wav
-sbatch normalizeAudio.s BiochemS1/Session_1_1100_Sensor_2/Two.wav BiochemS1/Session_1_1100_Sensor_2/TwoNormalized.wav
-sbatch normalizeAudio.s BiochemS1/Session_1_1100_Sensor_5/Five.wav BiochemS1/Session_1_1100_Sensor_5/FiveNormalized.wav
-sbatch normalizeAudio.s BiochemS1/Session_1_1100_Sensor_6/Six.wav BiochemS1/Session_1_1100_Sensor_6/SixNormalized.wav
-sbatch normalizeAudio.s BiochemS1/Session_1_1100_Sensor_7/Seven.wav BiochemS1/Session_1_1100_Sensor_7/SevenNormalized.wav
-sbatch normalizeAudio.s BiochemS1/Session_1_1100_Sensor_9/Nine.wav BiochemS1/Session_1_1100_Sensor_9/NineNormalized.wav
-sbatch normalizeAudio.s BiochemS1/Session_1_1230_Sensor_3/Three.wav BiochemS1/Session_1_1230_Sensor_3/ThreeNormalized.wav
-sbatch normalizeAudio.s BiochemS1/Session_1_1230_Sensor_4/Four.wav BiochemS1/Session_1_1230_Sensor_4/FourNormalized.wav
-sbatch normalizeAudio.s BiochemS1/Session_1_1230_Sensor_5/Five.wav BiochemS1/Session_1_1230_Sensor_5/FiveNormalized.wav
-sbatch normalizeAudio.s BiochemS1/Session_1_1230_Sensor_8/Eight.wav BiochemS1/Session_1_1230_Sensor_8/EightNormalized.wav
-sbatch normalizeAudio.s BiochemS1/Session_1_1400_Sensor_1/One.wav BiochemS1/Session_1_1400_Sensor_1/OneNormalized.wav
-sbatch normalizeAudio.s BiochemS1/Session_1_1400_Sensor_3/Three.wav BiochemS1/Session_1_1400_Sensor_3/ThreeNormalized.wav
-sbatch normalizeAudio.s BiochemS1/Session_1_1400_Sensor_5/Five.wav BiochemS1/Session_1_1400_Sensor_5/FiveNormalized.wav
-sbatch normalizeAudio.s BiochemS1/Session_1_1400_Sensor_6/Six.wav BiochemS1/Session_1_1400_Sensor_6/SixNormalized.wav
-sbatch normalizeAudio.s BiochemS1/Session_1_1400_Sensor_7/Seven.wav BiochemS1/Session_1_1400_Sensor_7/SevenNormalized.wav
-sbatch normalizeAudio.s BiochemS1/Session_1_1400_Sensor_9/Nine.wav BiochemS1/Session_1_1400_Sensor_9/NineNormalized.wav
-
-sbatch normalizeAudio.s BiochemS1/Session_2_0930_Sensor_1/One.wav BiochemS1/Session_2_0930_Sensor_1/OneNormalized.wav
-sbatch normalizeAudio.s BiochemS1/Session_2_0930_Sensor_2/Two.wav BiochemS1/Session_2_0930_Sensor_2/TwoNormalized.wav
-sbatch normalizeAudio.s BiochemS1/Session_2_0930_Sensor_3/Three.wav BiochemS1/Session_2_0930_Sensor_3/ThreeNormalized.wav
-sbatch normalizeAudio.s BiochemS1/Session_2_1100_Sensor_5/Five.wav BiochemS1/Session_2_1100_Sensor_5/FiveNormalized.wav
-sbatch normalizeAudio.s BiochemS1/Session_2_1100_Sensor_6/Six.wav BiochemS1/Session_2_1100_Sensor_6/SixNormalized.wav
-sbatch normalizeAudio.s BiochemS1/Session_2_1100_Sensor_7/Seven.wav BiochemS1/Session_2_1100_Sensor_7/SevenNormalized.wav
-sbatch normalizeAudio.s BiochemS1/Session_2_1100_Sensor_8/Eight.wav BiochemS1/Session_2_1100_Sensor_8/EightNormalized.wav
-sbatch normalizeAudio.s BiochemS1/Session_2_1230_Sensor_2/Two.wav BiochemS1/Session_2_1230_Sensor_2/TwoNormalized.wav
-sbatch normalizeAudio.s BiochemS1/Session_2_1230_Sensor_3/Three.wav BiochemS1/Session_2_1230_Sensor_3/ThreeNormalized.wav
-sbatch normalizeAudio.s BiochemS1/Session_2_1230_Sensor_4/Four.wav BiochemS1/Session_2_1230_Sensor_4/FourNormalized.wav
-sbatch normalizeAudio.s BiochemS1/Session_2_1230_Sensor_9/Nine.wav BiochemS1/Session_2_1230_Sensor_9/NineNormalized.wav
-sbatch normalizeAudio.s BiochemS1/Session_2_1400_Sensor_1/One.wav BiochemS1/Session_2_1400_Sensor_1/OneNormalized.wav
-sbatch normalizeAudio.s BiochemS1/Session_2_1400_Sensor_2/Two.wav BiochemS1/Session_2_1400_Sensor_2/TwoNormalized.wav
-sbatch normalizeAudio.s BiochemS1/Session_2_1400_Sensor_5/Five.wav BiochemS1/Session_2_1400_Sensor_5/FiveNormalized.wav
-sbatch normalizeAudio.s BiochemS1/Session_2_1400_Sensor_6/Six.wav BiochemS1/Session_2_1400_Sensor_6/SixNormalized.wav
-sbatch normalizeAudio.s BiochemS1/Session_2_1400_Sensor_7/Seven.wav BiochemS1/Session_2_1400_Sensor_7/SevenNormalized.wav
-sbatch normalizeAudio.s BiochemS1/Session_2_1400_Sensor_8/Eight.wav BiochemS1/Session_2_1400_Sensor_8/EightNormalized.wav
+sbatch normalizeAudio.s TDCP/smaller.wav TDCP/normalized.wav
 
 
 ## Create Transcript
 
 sbatch createTranscript.s /scratch/xao1/BiochemS1/Session_2_0930_Sensor_1/OneNormalized.wav /scratch/xao1/BiochemS1/Session_2_0930_Sensor_1 5
-sbatch createTranscript.s /scratch/xao1/BiochemS1/Session_2_0930_Sensor_2/TwoNormalized.wav /scratch/xao1/BiochemS1/Session_2_0930_Sensor_2 5
-sbatch createTranscript.s /scratch/xao1/BiochemS1/Session_2_0930_Sensor_3/ThreeNormalized.wav /scratch/xao1/BiochemS1/Session_2_0930_Sensor_3 5
-sbatch createTranscript.s /scratch/xao1/BiochemS1/Session_2_1100_Sensor_5/FiveNormalized.wav /scratch/xao1/BiochemS1/Session_2_1100_Sensor_5 5
-sbatch createTranscript.s /scratch/xao1/BiochemS1/Session_2_1100_Sensor_6/SixNormalized.wav /scratch/xao1/BiochemS1/Session_2_1100_Sensor_6 5
-sbatch createTranscript.s /scratch/xao1/BiochemS1/Session_2_1100_Sensor_7/SevenNormalized.wav /scratch/xao1/BiochemS1/Session_2_1100_Sensor_7 5
-sbatch createTranscript.s /scratch/xao1/BiochemS1/Session_2_1100_Sensor_8/EightNormalized.wav /scratch/xao1/BiochemS1/Session_2_1100_Sensor_8 5
-sbatch createTranscript.s /scratch/xao1/BiochemS1/Session_2_1230_Sensor_2/TwoNormalized.wav /scratch/xao1/BiochemS1/Session_2_1230_Sensor_2 5
-sbatch createTranscript.s /scratch/xao1/BiochemS1/Session_2_1230_Sensor_3/ThreeNormalized.wav /scratch/xao1/BiochemS1/Session_2_1230_Sensor_3 5
-sbatch createTranscript.s /scratch/xao1/BiochemS1/Session_2_1230_Sensor_4/FourNormalized.wav /scratch/xao1/BiochemS1/Session_2_1230_Sensor_4 5
-sbatch createTranscript.s /scratch/xao1/BiochemS1/Session_2_1230_Sensor_9/NineNormalized.wav /scratch/xao1/BiochemS1/Session_2_1230_Sensor_9 5
-sbatch createTranscript.s /scratch/xao1/BiochemS1/Session_2_1400_Sensor_1/OneNormalized.wav /scratch/xao1/BiochemS1/Session_2_1400_Sensor_1 5
-sbatch createTranscript.s /scratch/xao1/BiochemS1/Session_2_1400_Sensor_2/TwoNormalized.wav /scratch/xao1/BiochemS1/Session_2_1400_Sensor_2 5
-sbatch createTranscript.s /scratch/xao1/BiochemS1/Session_2_1400_Sensor_5/FiveNormalized.wav /scratch/xao1/BiochemS1/Session_2_1400_Sensor_5 5
-sbatch createTranscript.s /scratch/xao1/BiochemS1/Session_2_1400_Sensor_6/SixNormalized.wav /scratch/xao1/BiochemS1/Session_2_1400_Sensor_6 5
-sbatch createTranscript.s /scratch/xao1/BiochemS1/Session_2_1400_Sensor_7/SevenNormalized.wav /scratch/xao1/BiochemS1/Session_2_1400_Sensor_7 5
-sbatch createTranscript.s /scratch/xao1/BiochemS1/Session_2_1400_Sensor_8/EightNormalized.wav /scratch/xao1/BiochemS1/Session_2_1400_Sensor_8 5
+
 
 
 ## Segmenting People
