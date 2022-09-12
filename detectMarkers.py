@@ -1,16 +1,14 @@
 from roboflow import Roboflow
+import os
 
-rf = Roboflow(model_format="yolov5", notebook="roboflow-yolov5")
+rf = Roboflow(model_format="yolov5", notebook="ultralytics")
+os.environ["DATASET_DIRECTORY"] = "/scratch/xao1/TDCP/datasets"
 
 rf = Roboflow(api_key="PosvP3zTnv8pnd6MOQxG")
-project = rf.workspace("tdcp").project("detect-lines")
-dataset = project.version(5).download("yolov5",location="/scratch/xao1/TDCP/markers/")
+project = rf.workspace("tdcp").project("markers-lh8sr")
+dataset = project.version(1).download("yolov5")
 
-# define number of classes based on YAML
-import yaml
-with open("/scratch/xao1/TDCP/markers/data.yaml", 'r') as stream:
-    num_classes = str(yaml.safe_load(stream)['nc'])
-
-print("Number of classes: {}".format(num_classes))
-
+#!python train.py --img 416 --batch 16 --epochs 150 --data {dataset.location}/data.yaml --weights yolov5s.pt --cache
 #python /home/xao1/Code/yolov5/train.py --img 416 --batch 16 --epochs 100 --data /scratch/xao1/TDCP/markers/data.yaml --cfg /scratch/xao1/TDCP/markers/models/custom_yolov5s.yaml --weights '' --name yolov5s_results  --cache
+
+#python /home/xao1/Code/yolov5/detect.py --weights /home/xao1/Code/yolov5/runs/train/yolov5s_results/weights/best.pt --source /scratch/xao1/TDCP/smaller.mp4 --project /scratch/xao1/TDCP/markers/results/
